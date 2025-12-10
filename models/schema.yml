@@ -2,8 +2,14 @@
 version: 2
 
 sources:
-- name: ...
-tables:
-- name: ...
-- name: ...
-- name: ...
+  - name: raw               # Artık kaynak adı gz_raw_data değil → raw
+    schema: gz_raw_data     # BigQuery dataset burada duruyor
+    tables:
+      - name: raw_gz_sales  # Gerçek tablo adı
+        alias: sales        # DBT'de kullanacağın takma ad
+
+      - name: raw_gz_product
+        alias: product
+
+      - name: raw_gz_ship
+        alias: ship
