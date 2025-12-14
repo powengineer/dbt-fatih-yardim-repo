@@ -7,6 +7,11 @@ sources:
     tables:
       - name: raw_gz_sales  # Gerçek tablo adı
         alias: sales        # DBT'de kullanacağın takma ad
+        identifier: raw_gz_sales
+		    description: sales of Greenweez / we have on row per product_id found in each orders_id
+		    columns:
+			    - name: date_date
+			      description: date of purchase
 
       - name: raw_gz_product
         alias: product
