@@ -15,7 +15,7 @@ renamed as (
         shipping_fee
         WHERE shipping_fee IS DISTINCT FROM shipping_fee_1,
         logcost,
-        SAFE_CAST(ship_cost AS FLOAT64) AS ship_cost1 --ship_cost
+        SAFE_CAST(ship_cost AS FLOAT64) AS ship_cost1
     from source
 
 )
