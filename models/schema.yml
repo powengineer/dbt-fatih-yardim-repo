@@ -4,15 +4,14 @@ version: 2
 sources:
   - name: raw               # Artık kaynak adı gz_raw_data değil → raw
     schema: gz_raw_data     # BigQuery dataset burada duruyor
+    description: >
+      Raw data loaded from Greenweez source systems.
+      These tables contain untransformed transactional data.
+    
     tables:
       - name: raw_gz_sales  # Gerçek tablo adı
         alias: sales        # DBT'de kullanacağın takma ad
-        identifier: raw_gz_sales
-		    description: sales of Greenweez / we have on row per product_id found in each orders_id
-		    columns:
-			    - name: date_date
-			      description: date of purchase
-
+        
       - name: raw_gz_product
         alias: product
 
